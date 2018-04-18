@@ -23,13 +23,13 @@ Librería Panamahitek
 Para poder obtener la conexión entre los IDE de Arduino y Java se utilizó una librería llamada Panamahiteck, la cual trata de una compilación de métodos que permite enviar y recibir datos entre Arduino y un programa hecho en Java. La librería crea automáticamente la ruta C:/JavaRXTX (sólo en Windows), donde almacena estos archivos y los pone a disposición de nuestra aplicación. En la versión 2.8.0 se ha reemplazado la librería RXTX en favor de Java Simple Serial Connector y se ha agregado compatibilidad para sistemas operativos Linux, Mac y Solaris, además de Windows.
 El siguiente código muestra la manera en que se realizó la conexión entre NetBeans y Arduino.
 public ArduinoGUI() {
-        try {
-            //Se inicia la comunicación con el Puerto Serie
-            ino.arduinoTX("COM7", 9600);     
-        } catch (ArduinoException ex) {
-           Logger.getLogger(ArduinoGUI.class.getName()).log(Level.SEVERE, null, ex);
-        }        
-    }
+try {
+//Se inicia la comunicación con el Puerto Serie
+ino.arduinoTX("COM7", 9600);     
+} catch (ArduinoException ex) {
+Logger.getLogger(ArduinoGUI.class.getName()).log(Level.SEVERE, null, ex);
+}        
+}
 
 DIAGRAMA
 ![Imagen Arduino](diagrama.jpg "Foto Diagrama")
